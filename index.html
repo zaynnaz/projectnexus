@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narrative Nexus</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar-container">
+        <div class="nav-item">
+            <img src="./assets/images/NarrativeNexus-logo.png" class="site-logo">
+            <a href="#">NN</a>
+        </div>
+        <div class="nav-item search-div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+            <input placeholder="Search Story" type="text" class="search">
+        </div>
+        <div class="nav-item margin-auto nav-3">
+            <div class="list nav-notifications">
+                <div class="nav-notifications-active-bar hide"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell nav-svg notification-svg" id="notifications" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+                </svg>
+            </div>
+            <div class="notifications-container hide">
+                <div class="notifications-header">
+                    <p>Notifications</p>
+                    <a href="#">View All</a>
+                </div>
+                <div class="notifications-list">
+                    <div class="notifications-item">
+                        <div class="notifications-img">
+                            <img src="https://placehold.co/50x50/" alt="user profile picture">
+                        </div>
+                        <div class="notifications-content">
+                            <h5>UserName</h5>
+                            <p class="action">Commented on your review in, StoryName.</p>
+                            <p class="content"></p>
+                            <p class="time-stamp">Just now</p>
+                            <div class="stamp">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-item">
+                        <div class="notifications-img">
+                            <img src="https://placehold.co/50x50/" alt="user profile picture">
+                        </div>
+                        <div class="notifications-content">
+                            <h5>UserName</h5>
+                            <p class="action">Posted a review on, StoryName.</p>
+                            <p class="content"></p>
+                            <p class="time-stamp">2d</p>
+                            <div class="stamp">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-item">
+                        <div class="notifications-img">
+                            <img src="https://placehold.co/50x50/" alt="user profile picture">
+                        </div>
+                        <div class="notifications-content">
+                            <h5>UserName</h5>
+                            <p class="action">Posted a story.</p>
+                            <p class="content"></p>
+                            <p class="time-stamp">3d</p>
+                            <div class="stamp">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-item">
+                        <div class="notifications-img">
+                            <img src="https://placehold.co/50x50/" alt="user profile picture">
+                        </div>
+                        <div class="notifications-content">
+                            <h5>UserName</h5>
+                            <p class="action">Added a post.</p>
+                            <p class="content"></p>
+                            <p class="time-stamp">4d</p>
+                            <div class="stamp">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-item">
+                        <div class="notifications-img">
+                            <img src="https://placehold.co/50x50/" alt="user profile picture">
+                        </div>
+                        <div class="notifications-content">
+                            <h5>UserName</h5>
+                            <p class="action">Uploaded a new photo.</p>
+                            <p class="content"></p>
+                            <p class="time-stamp">4w</p>
+                            <div class="stamp">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-item">
+                        <div class="notifications-img">
+                            <img src="https://placehold.co/50x50/" alt="user profile picture">
+                        </div>
+                        <div class="notifications-content">
+                            <h5>UserName</h5>
+                            <p class="action">Commented on your status.</p>
+                            <p class="content"></p>
+                            <p class="time-stamp">4w</p>
+                            <div class="stamp">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications-item">
+                        <div class="notifications-img">
+                            <img src="https://placehold.co/50x50/" alt="user profile picture">
+                        </div>
+                        <div class="notifications-content">
+                            <h5>UserName</h5>
+                            <p class="action">Rated your story.</p>
+                            <p class="content"></p>
+                            <p class="time-stamp">4w</p>
+                            <div class="stamp">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list nav-dm">
+                <div class="nav-dm-active-bar hide"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-inbox nav-svg dms-svg" id="dm" viewBox="0 0 16 16">
+                    <path d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm9.954 5H10.45a2.5 2.5 0 0 1-4.9 0H1.066l.32 2.562a.5.5 0 0 0 .497.438h12.234a.5.5 0 0 0 .496-.438L14.933 9zM3.809 3.563A1.5 1.5 0 0 1 4.981 3h6.038a1.5 1.5 0 0 1 1.172.563l3.7 4.625a.5.5 0 0 1 .105.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374l3.7-4.625z"/>
+                </svg> 
+            </div>
+            <div class="dm-container hide">
+                <div class="dm-header">
+                    <p>Direct Messaging</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                    </svg>
+                </div>
+                <div class="dm-search">
+                    <input placeholder="Search" type="text" class="dm-search-bar">
+                </div>
+                <div class="dm-friends">
+                    <div class="dm-friends-card">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <p class="friend-name">Friend</p>
+                        <div class="dm-friend-card-unactive-time"></div>
+                        <div class="dm-friend-card-active"></div>   
+                    </div>
+                    <div class="dm-friends-card">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <p class="friend-name">Friend</p>
+                        <div class="dm-friend-card-unactive-time"></div>
+                        <div class="dm-friend-card-active"></div>   
+                    </div>
+                    <div class="dm-friends-card">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <p class="friend-name">Friend</p>
+                        <div class="dm-friend-card-unactive-time"></div>
+                        <div class="dm-friend-card-active"></div>   
+                    </div>
+                    <div class="dm-friends-card">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <p class="friend-name">Friend</p>
+                        <div class="dm-friend-card-unactive-time"></div>
+                        <div class="dm-friend-card-active"></div>   
+                    </div>
+                    <div class="dm-friends-card">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <p class="friend-name">Friend</p>
+                        <div class="dm-friend-card-unactive-time"></div>
+                        <div class="dm-friend-card-active"></div>   
+                    </div>
+                </div>
+                <div class="dm-list">
+                    <div class="dm-item">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <div class="dm-item-info">
+                            <a href="#"><h5 class="friend-username">UserName</h5></a>
+                            <p class="friend-text">Lorem ipsum dolor sit amet,</p>
+                        </div>
+                        <div class="dm-item-status">
+                            <p class="dm-item-time">12:00 am</p>
+                            <div class="dm-item-unread"></div>
+                            <div class="dm-friend-read">
+                                <img src="https://placehold.co/60x60/">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-item">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <div class="dm-item-info">
+                            <a href="#"><h5 class="friend-username">UserName</h5></a>
+                            <p class="friend-text">Lorem ipsum dolor sit amet,</p>
+                        </div>
+                        <div class="dm-item-status">
+                            <p class="dm-item-time">12:00 am</p>
+                            <div class="dm-item-unread"></div>
+                            <div class="dm-friend-read">
+                                <img src="https://placehold.co/60x60/">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-item">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <div class="dm-item-info">
+                            <a href="#"><h5 class="friend-username">UserName</h5></a>
+                            <p class="friend-text">Lorem ipsum dolor sit amet,</p>
+                        </div>
+                        <div class="dm-item-status">
+                            <p class="dm-item-time">12:00 am</p>
+                            <div class="dm-item-unread"></div>
+                            <div class="dm-friend-read">
+                                <img src="https://placehold.co/60x60/">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-item">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <div class="dm-item-info">
+                            <a href="#"><h5 class="friend-username">UserName</h5></a>
+                            <p class="friend-text">Lorem ipsum dolor sit amet,</p>
+                        </div>
+                        <div class="dm-item-status">
+                            <p class="dm-item-time">12:00 am</p>
+                            <div class="dm-item-unread"></div>
+                            <div class="dm-friend-read">
+                                <img src="https://placehold.co/60x60/">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-item">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <div class="dm-item-info">
+                            <a href="#"><h5 class="friend-username">UserName</h5></a>
+                            <p class="friend-text">Lorem ipsum dolor sit amet,</p>
+                        </div>
+                        <div class="dm-item-status">
+                            <p class="dm-item-time">12:00 am</p>
+                            <div class="dm-item-unread"></div>
+                            <div class="dm-friend-read">
+                                <img src="https://placehold.co/60x60/">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dm-item">
+                        <a href="#"><img src="https://placehold.co/60x60/" alt="user profile picture."></a>
+                        <div class="dm-item-info">
+                            <a href="#"><h5 class="friend-username">UserName</h5></a>
+                            <p class="friend-text">Lorem ipsum dolor sit amet,</p>
+                        </div>
+                        <div class="dm-item-status">
+                            <p class="dm-item-time">12:00 am</p>
+                            <div class="dm-item-unread"></div>
+                            <div class="dm-friend-read">
+                                <img src="https://placehold.co/60x60/">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pen" id="upload-icon" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+            </svg>
+            <div class="create-upload">
+                <div class="nav-create-active-bar hide"></div>
+                <p>Create/Upload
+                </p>
+                <svg class="create-dropdown" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10l5 5 5-5"/>
+                </svg>
+                <ul class="nav-dropdown create hide">
+                    <li><a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                      </svg>New Work</a></li>
+                    <li><a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                      </svg>New Post</a></li>
+                    <li><a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                      </svg>New Group</a></li>
+                    <li><a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                      </svg>New FanPage</a></li>
+                </ul>
+            </div>
+            <div class="nav-item nav-4">
+                <div class="nav-user-active-bar hide"></div>
+                <img src="./assets/images/profile-pic_male.png" class="user-img">   
+                <p class="user-name">UserName</p>
+            </div>
+            <div class="nav-user-dropdown hide">
+                <div class="user-cred">
+                    <p class="user-name-dropdown">UserName</p>
+                    <p class="user-title-dropdown">UserTitle</p>
+                </div>
+                <div class="user-profile-list">
+                    <ul>
+                        <div class="profile-1">
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+                              </svg><a href="#">My Profile</a></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+                              </svg><a href="#">Achievements</a></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                                <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+                              </svg><a href="#">Analytics</a></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-inbox" viewBox="0 0 16 16">
+                                <path d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm9.954 5H10.45a2.5 2.5 0 0 1-4.9 0H1.066l.32 2.562a.5.5 0 0 0 .497.438h12.234a.5.5 0 0 0 .496-.438L14.933 9zM3.809 3.563A1.5 1.5 0 0 1 4.981 3h6.038a1.5 1.5 0 0 1 1.172.563l3.7 4.625a.5.5 0 0 1 .105.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374l3.7-4.625z"/>
+                              </svg><a href="#">Inbox</a></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                              </svg><a href="#">Settings</a></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                              </svg><a href="#">Help & Support</a></li>
+                        </div>
+                        <div class="profile-2">
+                            <hr>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                              </svg><a href="#">Log Out</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar-container close">
+        <div class="hamburger-sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            <p class="sidebar-title hide">Nexus</p>
+        </div>
+        <div class="side-links">
+            <p class="sidebar-category">Main</p>
+            <div class="side-item" id="home"><div id="home-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="home-svg" class="bi bi-house main-svg" viewBox="0 0 16 16">
+                <path id="home1" d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+              </svg><a href="#link1" class="non-dropdown hide">Home</a>
+            </div>
+            <div class="side-item" id="stories"><div id="stories-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="stories-svg" class="bi bi-book main-svg" viewBox="0 0 16 16">
+                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+              </svg><a href="#link2" class="hide">Stories<svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="dropdown-svg">
+                <path d="M7 10l5 5 5-5"/>
+            </svg></a></div>
+                <ul class="dropdown stories-dropdown hide">
+                    <li><a href="#">Fandoms</a></li>
+                    <li><a href="#">Genres</a></li>
+                    <li><a href="#">Latest</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Challenges</a></li>
+                    <li><a href="#">Recommends</a></li>
+                    <li><a href="#">Story Request</a></li>
+                    <li><a href="#">Random Story</a></li>
+                    <li><a href="#">Completed</a></li>
+                </ul> 
+            <div class="side-item" id="authors"><div id="authors-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="authors-svg" class="bi bi-pencil main-svg" viewBox="0 0 16 16">
+                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+              </svg><a href="#link3" class="hide">Authors<svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="dropdown-svg">
+                <path d="M7 10l5 5 5-5"/>
+                </svg></a></div>
+                <ul class="dropdown authors-dropdown hide">
+                    <li><a href="#">Top Authors</a></li>
+                    <li><a href="#">New Authors</a></li>
+                    <li><a href="#">Author interviews</a></li>
+                </ul> 
+            <div class="side-item" id="community"><div id="community-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="community-svg" class="bi bi-people main-svg" viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+              </svg><a href="#link4" class="hide">Community<svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="dropdown-svg">
+                <path d="M7 10l5 5 5-5"/>
+                </svg></a></div> 
+                <ul class="dropdown community-dropdown hide">
+                    <li><a href="#">FicFeed</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Fan-Pages</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                </ul> 
+            <div class="side-item" id="resources"><div id="resources-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="resources-svg" class="bi bi-info-circle main-svg" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+              </svg><a href="#link5" class="hide">Resources<svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="dropdown-svg">
+                <path d="M7 10l5 5 5-5"/>
+                </svg></a></div>
+                <ul class="dropdown resources-dropdown hide">
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">User-Guides</a></li>
+                    <li><a href="#">Community Forum</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                </ul> 
+            <p class="sidebar-category">User</p>
+            <div class="side-item" id="library"><div id="library-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="library-svg" class="bi bi-archive main-svg" viewBox="0 0 16 16">
+                <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+                </svg><a href="#link6" class="hide">My Library<svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="dropdown-svg">
+                <path d="M7 10l5 5 5-5"/>
+                </svg></a></div> 
+                <ul class="dropdown library-dropdown hide">
+                    <li><a href="#">My Stories</a></li>
+                    <li><a href="#">My Drafts</a></li>
+                    <li><a href="#">Favorites</a></li>
+                    <li><a href="#">Reading History</a></li>
+                    <li><a href="#">Read Later</a></li>
+                    <li><a href="#">Feedback Recieved</a></li>
+                    <li><a href="#">Achievements</a></li>
+                </ul> 
+            <div class="side-item" id="ficpage"><div id="ficpage-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="ficpage-svg" class="bi bi-file main-svg" viewBox="0 0 16 16">
+                <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
+                </svg><a href="#link7" class="non-dropdown hide">My FicPage</a></div>
+            <div class="side-item" id="settings"><div id="settings-bar" class="active-bar"></div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" id="settings-svg" class="bi bi-gear main-svg" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+              </svg><a href="#link8" class="non-dropdown hide">Settings</a></div>
+        </div>
+        <div class="side-item user-area">
+            <img src="./assets/images/profile-pic_male.png" class="user-img">
+            <div class="user-info hide">
+                <p>User Name</p>
+                <p>User Title</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-right log-out hide" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main-content">
+        <div class="welcome">
+            <h1>Welcome back, UserName!</h1>
+        </div>
+
+        <div class="area-1">
+            <div class="rng">
+                <div class="rng-story">
+                    <img src="https://placehold.co/250x340/png" id="rng-img">
+                    <h2 style="display: inline;" id="rng-title">Random Story Title <p style="display: inline;" id="rng-author">by <a href="#" class="rng-author">Author</a></p></h2>
+                    <p id="rng-info">Fandom: Lorem Ipsum | Genre: Lorem | Rating: x | Word Count: x,xxx,xxx | Chapters: xxx | Warnings: x |</p>
+                    <p id="rng-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Urna condimentum mattis pellentesque id nibh. Pellentesque elit eget gravida cum sociis natoque penatibus etcatacy. tempor incididunt ut labore et dolore magna aliqua ut aliquip ex ea commodo consequat.</p><hr>
+                    <p id="rng-status">Language: English | Published: xx-xx-xxxx | Updated: xx-xx-xxxx | Reviews: xx,xxx | Comments: xx,xxx | Followers: xx,xxx | Ratings: xx,xxx | Reads: x,xxxx,xxx |</p>
+                    <div class="rng-buttons">
+                        <button id="read">Read</button>
+                        <button id="skip">Skip</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Stories Section -->
+        <section class="top-stories-section">
+            <div class="left-side">
+                <div class="category-title featured">
+                    <h1>Featured Stories</h1>
+                </div>
+                <input type="radio" name="slider" id="slide1" class="radio-slider" checked>
+                <input type="radio" name="slider" id="slide2" class="radio-slider">
+                <input type="radio" name="slider" id="slide3" class="radio-slider">
+                <input type="radio" name="slider" id="slide4" class="radio-slider">
+                <input type="radio" name="slider" id="slide5" class="radio-slider">
+                <input type="radio" name="slider" id="slide6" class="radio-slider">
+                <input type="radio" name="slider" id="slide7" class="radio-slider">
+                <input type="radio" name="slider" id="slide8" class="radio-slider">
+                <input type="radio" name="slider" id="slide9" class="radio-slider">
+                <input type="radio" name="slider" id="slide10" class="radio-slider">
+                <div class="slider">
+                    <label for="slide1" class="slide slide1">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide2" class="slide slide2">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title24</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide3" class="slide slide3">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title34</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide4" class="slide slide4">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide5" class="slide slide5">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide6" class="slide slide6">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide7" class="slide slide7">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide8" class="slide slide8">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide9" class="slide slide9">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="slide10" class="slide slide10">
+                        <div class="slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title9</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="category-title top">
+                    <h1>Top Stories</h1>
+                </div>
+                <input type="radio" name="top-slider" id="top-slide1" class="top-radio-slider" checked>
+                <input type="radio" name="top-slider" id="top-slide2" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide3" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide4" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide5" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide6" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide7" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide8" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide9" class="top-radio-slider">
+                <input type="radio" name="top-slider" id="top-slide10" class="top-radio-slider">
+                <div class="slider">
+                    <label for="top-slide1" class="slide slide1">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide2" class="slide slide2">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title24</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide3" class="slide slide3">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title34</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide4" class="slide slide4">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide5" class="slide slide5">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide6" class="slide slide6">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide7" class="slide slide7">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide8" class="slide slide8">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide9" class="slide slide9">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title1</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                    <label for="top-slide10" class="slide slide10">
+                        <div class="top-slide-card">
+                            <div class="card-content">
+                                <h2>Featured Story Title9</h2>
+                                <a href="#">Author</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt.</p>
+                            </div>
+                            <img src="https://placehold.co/250x340">
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="area-3">
+            <div class="area-3-container">
+                <div class="last-read-container">
+                    <h1>Last Read...</h1>
+                    <a href="#"><img src="https://placehold.co/250x340/"></a>
+                    <h2>Last Read Title</h2>
+                    <P>Last Chapter: xx</P>
+                    <p>Progression: 100%</p>
+                    <a href="#" id="continue">Continue Reading...</a>
+                </div>
+                <div class="for-you-container">
+                    <h1>Top Picks For You</h1>
+                    <div id="fy-slide">
+                        <div class="fy-slide-list">
+                            <div class="fy-item" style="
+                                --fy-item-title: 'fandom'
+                                ">
+                                <div class="fy-item-content">
+                                    <div class="fy-image"><img src="https://placehold.co/250x340/" alt=""></div>
+                                    <div class="fy-info">
+                                        <div class="fy-item-creds">
+                                            <p class="fy-item-title">Story Title1</p>
+                                            <a href="#" class="fy-item-author">by Author</p></a>
+                                        </div>
+                                        <div class="fy-item-info">
+                                            <P class="fy-item-language">Language: English</P>
+                                            <p class="fy-item-genre">Genre: Lorem</p>
+                                            <P class="fy-item-rating">Rating: x</P>
+                                            <p class="fy-item-words">Words: xx,xxx,xxx</p>
+                                            <p class="fy-item-chapters">Chapters: xxx</p>
+                                        </div>
+                                        <p class="fy-item-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <a href="#" class="fy-item-read">Read Now →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fy-item hide" style="
+                            --fy-item-title: 'fandom'
+                            ">
+                                <div class="fy-item-content">
+                                    <div class="fy-image"><img src="https://placehold.co/250x340/" alt=""></div>
+                                    <div class="fy-info">
+                                        <div class="fy-item-creds">
+                                            <p class="fy-item-title">Story Title2</p>
+                                            <a href="#" class="fy-item-author">by Author</p></a>
+                                        </div>
+                                        <div class="fy-item-info">
+                                            <P class="fy-item-language">Language: English</P>
+                                            <p class="fy-item-genre">Genre: Lorem</p>
+                                            <P class="fy-item-rating">Rating: x</P>
+                                            <p class="fy-item-words">Words: xx,xxx,xxx</p>
+                                            <p class="fy-item-chapters">Chapters: xxx</p>
+                                        </div>
+                                        <p class="fy-item-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <a href="#" class="fy-item-read">Read Now →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fy-item hide" style="
+                            --fy-item-title: 'fandom'
+                            ">
+                                <div class="fy-item-content">
+                                    <div class="fy-image"><img src="https://placehold.co/250x340/" alt=""></div>
+                                    <div class="fy-info">
+                                        <div class="fy-item-creds">
+                                            <p class="fy-item-title">Story Title3</p>
+                                            <a href="#" class="fy-item-author">by Author</p></a>
+                                        </div>
+                                        <div class="fy-item-info">
+                                            <P class="fy-item-language">Language: English</P>
+                                            <p class="fy-item-genre">Genre: Lorem</p>
+                                            <P class="fy-item-rating">Rating: x</P>
+                                            <p class="fy-item-words">Words: xx,xxx,xxx</p>
+                                            <p class="fy-item-chapters">Chapters: xxx</p>
+                                        </div>
+                                        <p class="fy-item-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <a href="#" class="fy-item-read">Read Now →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrows">
+                        <button id="prev"><</button>
+                        <button id="next">></button>
+                    </div>
+                    <div class="dots">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
